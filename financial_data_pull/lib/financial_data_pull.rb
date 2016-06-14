@@ -1,7 +1,6 @@
-require_relative "./financial_data_pull/version"
-
-#module FinancialDataPull
+module FinancialDataPull
   # Your code goes here...
-#end
+end
 
-require "./lib/cli"
+
+require_relative "../config/environment"
