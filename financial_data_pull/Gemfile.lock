@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    financial_data_pull (0.1.0)
+    financial_data_pull (0.2.0)
 
 GEM
   remote: https://rubygems.org/
