@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["tmb41"]
   spec.email         = ["tylor.balson@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Displays simple CLI to quickly pull important financial metrics for some 
+    of the most popular stocks, or also allows for any ticker to be inputted and pulled.}
+  spec.homepage      = "https://github.com/tmb41/tylor-cli-gem"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
@@ -30,4 +30,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.11"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
+  spec.add_development_dependency "pry"
+
 end

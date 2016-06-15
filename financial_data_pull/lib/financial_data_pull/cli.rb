@@ -1,6 +1,3 @@
-#require 'nokogiri'
-#require 'open-uri'
-#require "pry"
 
 
 class FinancialDataPull::CLI
@@ -9,17 +6,14 @@ class FinancialDataPull::CLI
   def call
     
     initialprint
-    menue
-    #scrape
-    #printticker
-    #again?
+    start
   end
 
   def initialprint
-    puts "Financial Data Pull:"
+    puts "~~~ Welcome to Tylor's CLI GEM ~~~\n"
   end
 
-  def menue
+  def start
 
     input = nil
     while input != "exit"
@@ -30,24 +24,24 @@ class FinancialDataPull::CLI
     puts "3. AAPL - Apple, Inc."
     puts "4. FB - Facebook, Inc."
     puts "5. Type in ticker manually"
-    puts "6. exit\n"
+    puts "6. EXIT\n"
     input = gets.strip.downcase 
 
     case input
         when "1"
-          puts "Google selected"
+          puts "Google was selected, printing Google:"
           @ticker = "goog"
           FinancialDataPull::Scraper.scrape(ticker)
         when "2"
-          puts "Tesla slected"
+          puts "Tesla was slected, printing Tesla:"
           @ticker = "tsla"
           FinancialDataPull::Scraper.scrape(ticker)
         when "3"
-          puts "Apple selected"
+          puts "Apple was selected, printing Apple:"
           @ticker = "aapl"
           FinancialDataPull::Scraper.scrape(ticker)
         when "4"
-          puts "Facebook selected"
+          puts "Facebook was selected, printing Facebook:"
           @ticker = "fb"
           FinancialDataPull::Scraper.scrape(ticker)
         when "5"
@@ -55,7 +49,7 @@ class FinancialDataPull::CLI
           @ticker = gets.strip.downcase
           FinancialDataPull::Scraper.scrape(ticker)
         when "6"
-          puts "Exiting the program"
+          puts "Exiting the program..."
           input = "exit"
         else
         end
